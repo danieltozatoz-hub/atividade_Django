@@ -14,7 +14,7 @@ class Tipo(models.Model):
                       ('100', '100 - Filosofia e Psicologia'),
                       ('200', '200 - Religião e Teologia'),
                       ('300', '300 - Ciências Sociais e Direito'),
-                      ('400', ''),
+                      ('400', '400 - Linguística e Idiomas'),
                       ('500', ''),
                       ('700', ''),
                       ('800', ''),
