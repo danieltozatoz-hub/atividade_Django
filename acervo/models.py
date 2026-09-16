@@ -7,5 +7,10 @@ class Livro(models.Model):
     disponivel = models.BooleanField(default=True)
     
 
+class Tipo(models.Model):
+    tipo_acervo = [('digital', 'Digital'),('físico', 'Físico')]
+    
+    tipo_categoria = 
+
     def __str__(self):
         return self.titulo
