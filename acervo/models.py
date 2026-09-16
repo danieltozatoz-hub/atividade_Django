@@ -6,11 +6,14 @@ class Livro(models.Model):
     ano = models.IntegerField()
     disponivel = models.BooleanField(default=True)
     
+    def __str__(self):
+        return self.titulo
+    
 
 class Tipo(models.Model):
-    tipo_acervo = [('digital', 'Digital'),('físico', 'Físico')]
+    tipo_acervo_choices = [('digital', 'Digital'),('físico', 'Físico')]
     
-    tipo_categoria = [('000', '000 - Generalidades e Informação'),
+    categoria_choices = [('000', '000 - Generalidades e Informação'),
                       ('100', '100 - Filosofia e Psicologia'),
                       ('200', '200 - Religião e Teologia'),
                       ('300', '300 - Ciências Sociais e Direito'),
@@ -19,8 +22,11 @@ class Tipo(models.Model):
                       ('600', '600 - Ciências Aplicadas'),
                       ('700', '700 - Artes e Recreação'),
                       ('800', '800 - Literatura'),
-                      ('900', ''),
+                      ('900', '900 - História e Geografia'),
     ]
+    
+    tipo_acervo = models.CharField(max_length=10, choices=tipo_acervo_choices)
+    categoria = models.CharField(max_length=3, choices=categoria_choices)
 
     def __str__(self):
         return self.titulo
