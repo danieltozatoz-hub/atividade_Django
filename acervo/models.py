@@ -16,7 +16,7 @@ class Tipo(models.Model):
                       ('300', '300 - Ciências Sociais e Direito'),
                       ('400', '400 - Linguística e Idiomas'),
                       ('500', '500 - Ciências Puras'),
-                      ('600', ''),
+                      ('600', '600 - Ciências Aplicadas'),
                       ('700', ''),
                       ('800', ''),
                       ('900', ''),
