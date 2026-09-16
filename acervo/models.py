@@ -10,7 +10,10 @@ class Livro(models.Model):
 class Tipo(models.Model):
     tipo_acervo = [('digital', 'Digital'),('físico', 'Físico')]
     
-    tipo_categoria = 
+    tipo_categoria = [('000', '000 - Generalidades e Informação'),
+                      
+        
+    ]
 
     def __str__(self):
         return self.titulo
