@@ -18,7 +18,7 @@ class Tipo(models.Model):
                       ('500', '500 - Ciências Puras'),
                       ('600', '600 - Ciências Aplicadas'),
                       ('700', '700 - Artes e Recreação'),
-                      ('800', ''),
+                      ('800', '800 - Literatura'),
                       ('900', ''),
     ]
 
