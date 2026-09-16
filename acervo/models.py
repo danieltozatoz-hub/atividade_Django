@@ -12,7 +12,13 @@ class Tipo(models.Model):
     
     tipo_categoria = [('000', '000 - Generalidades e Informação'),
                       ('100', '100 - Filosofia e Psicologia'),
-                      ('200', '200 - Religião e Teologia')
+                      ('200', '200 - Religião e Teologia'),
+                      ('300', '300 - Ciências Sociais e Direito'),
+                      ('400', ''),
+                      ('500', ''),
+                      ('700', ''),
+                      ('800', ''),
+                      ('900', ''),
     ]
 
     def __str__(self):
