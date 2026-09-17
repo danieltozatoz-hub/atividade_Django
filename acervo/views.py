@@ -1,10 +1,16 @@
 from django.shortcuts import render
-from .models import Livro
+from .models import Livro, Tipo
 
 def lista_livros(request):
-    livros = Livro.objects.all() # busca no banco
+    livros = Livro.objects.all()
+    nome = request.GET.get('nome')
+    tipo = request.GET.get('tipo')
+    categoria = request.GET.get('categoria')
+    if nome: livros = livros.filter(titulo__icontains=nome)
+    if tipo: livros = livros.filter(tipo_acervo=nome)
+    if categoria: livros = livros.filter(categoria=categoria)
     return render(
-        request, 'acervo/lista.html',
+        request, 'lista.html',
         {'livros': livros} # envia ao template
     )
     

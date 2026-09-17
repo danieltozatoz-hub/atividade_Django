@@ -5,6 +5,7 @@ class Livro(models.Model):
     autor = models.CharField(max_length=100)
     ano = models.IntegerField()
     disponivel = models.BooleanField(default=True)
+    tipo = models.ForeignKey(Tipo, on_delete=models.PROTECT)
     
     def __str__(self):
         return self.titulo
@@ -29,4 +30,4 @@ class Tipo(models.Model):
     categoria = models.CharField(max_length=3, choices=categoria_choices)
 
     def __str__(self):
-        return self.titulo
+        return f"{self.get_tipo_acervo_display()} - {self.get_categoria_display()}"
